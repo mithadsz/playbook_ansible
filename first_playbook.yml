@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+      - name: create file
+        file: path=/tmp/playbook_file state=touch
+
+- hosts: all
+  sudo: yes
+  tasks: 
+       - name: create ansible user
+         user: name=anuser shell=/bin/bash 
